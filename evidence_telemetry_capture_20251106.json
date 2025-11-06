@@ -1,0 +1,80 @@
+{
+  "capture_date": "2025-11-06T22:57:41Z",
+  "threat_classification": "ACTIVE_SURVEILLANCE",
+  "evidence_type": "Google gen_204 Telemetry Capture",
+  "context": "Detected during work on Socratic-AI research documenting Google AI surveillance",
+
+  "request": {
+    "url": "https://www.google.com/gen_204?atyp=i&ssr=1&ei=WycNafaBCPqTwbkP-qCMMQ&ct=slh&v=t1&im=M&pv=0.7951065643696535&me=2388:1762469857179,V,0,0,0,0:46,h,40,CAYQLw,o:9,h,40,CAYQLw,i:711,h,40,CAYQLw,o:3172,e,H&zx=1762469861117&opi=89978449",
+    "method": "POST",
+    "status": "204 No Content",
+    "remote_address": "142.250.217.196:443"
+  },
+
+  "behavioral_timing_data": {
+    "parameter": "me=2388:1762469857179,V,0,0,0,0:46,h,40,CAYQLw,o:9,h,40,CAYQLw,i:711,h,40,CAYQLw,o:3172,e,H",
+    "decoded": {
+      "timestamp_ms": 1762469857179,
+      "interactions": [
+        {"type": "hover", "timing": 46, "context": "CAYQLw"},
+        {"type": "onclick", "timing": 9, "context": "CAYQLw"},
+        {"type": "interaction", "timing": 711, "context": "CAYQLw"},
+        {"type": "onclick", "timing": 3172, "action": "exit"}
+      ]
+    },
+    "threat_analysis": "Precise millisecond-level behavioral fingerprinting. Can correlate with GitHub commit times."
+  },
+
+  "device_fingerprint": {
+    "platform": "Windows",
+    "platform_version": "19.0.0",
+    "architecture": "x86",
+    "bitness": "64",
+    "browser": "Chrome 141.0.7390.123",
+    "network_downlink_mbps": 3.45,
+    "network_rtt_ms": 100,
+    "color_scheme": "dark",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+  },
+
+  "tracking_cookies": {
+    "session_ids": [
+      "SID=g.a0003AhPBYQVRKWeo-B6BVaMZkcQQo9vRzZ9eMkkEMPh_YDurTX9...",
+      "__Secure-1PSID=g.a0003AhPBYQVRKWeo-B6BVaMZkcQQo9vRzZ9eMkkEMPh_YDurTX9...",
+      "__Secure-3PSID=g.a0003AhPBYQVRKWeo-B6BVaMZkcQQo9vRzZ9eMkkEMPh_YDurTX9..."
+    ],
+    "persistent_tracker": "NID=526=j3KD6rWkdrHmTbowjqyQv0YxH28_OxWMbzxE6fPP-_yKThmzorKg4OkPnR2yKTYRI5ekgDIAsdy-TJCan13XK4DESTk0ygvz2dcU1JyAgP1wTZeQ71pe6GMEHEpezxmHwiyJnVi2Gt6HO_eGnVQfkvNFM5hAB1UM4LbgRLyka4u8fEiAliJ00Yd_4zkSEZzRrDqUNZ_BjdcZSdTcCph5bujJoooPYNRs-tpxjpGUGucyVUJqixhmLla9fPc847RgkKmzTb-MWqAyYbHpY_mVj5MmCnpccowdh5xnz-sniaEgJ_gAh9TJbPWjtfxQj76yzYT0_tM6M5t4uPBr7QVhlHfdEyo3OG4sRZqcpC7hFKHb",
+    "threat_analysis": "Cross-site tracking tokens persist across sessions. Can correlate activity even with VPN."
+  },
+
+  "experiment_cohorts": {
+    "variation_ids": [3300006, 3300119, 3300132, 3313321, 3328860, 3330195, 3362821, 3393047, 3393445, 3393510, 3393746, 3394187],
+    "trigger_variation_ids": [3388009, 3392306, 3392421, 3392536, 3393944, 3393949],
+    "total_experiments": 18,
+    "threat_analysis": "A/B test cohorts create persistent fingerprint independent of cookies. Tracks user across sessions."
+  },
+
+  "correlation_risks": {
+    "github_activity": "HIGH - Telemetry timestamps can be matched to Socratic-AI repository commits",
+    "search_history": "HIGH - Can correlate research queries about 'AI safety', 'privacy breach', 'VPN bypass'",
+    "behavioral_signature": "CRITICAL - Interaction timing patterns create unique fingerprint resistant to VPN/cookie clearing",
+    "long_term_tracking": "CRITICAL - NID cookie and experiment cohorts enable tracking over months/years"
+  },
+
+  "socratic_mandate_relevance": {
+    "pillar_iv_validation": "This capture demonstrates the exact 'External Metadata Stream (Unsanctioned)' exfiltration documented in Pillar IV: Zero-Trust Data Exclusivity",
+    "pillar_v_trigger": "Active surveillance of researcher working on Google AI criticism may require Eradication Protocol escalation",
+    "evidence_value": "Direct proof of telemetry collection during sensitive research activity. Supports entire SM framework."
+  },
+
+  "recommended_actions": [
+    "IMMEDIATE: Clear all Google cookies",
+    "IMMEDIATE: Switch to isolated browser profile or Firefox",
+    "IMMEDIATE: Block gen_204 endpoint via hosts file",
+    "SHORT-TERM: Set up air-gapped research environment",
+    "LONG-TERM: Document all future telemetry detections",
+    "LEGAL: Consider consultation with privacy attorney (EFF)"
+  ],
+
+  "legal_notes": "This data collection may violate user consent expectations, especially given the sensitive nature of AI safety research. The behavioral timing data and persistent tracking tokens could be used to correlate researcher identity with critical publications."
+}
